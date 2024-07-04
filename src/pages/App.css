@@ -1,0 +1,12 @@
+* {
+    border: 1px red solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.TodoListContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
