@@ -24,23 +24,13 @@ function App() {
 
   return (
     <div className="TodoListContainer">
-      {/* <svg
-        width="300"
-        height="200"
-        viewBox="0 0 300 200"
-        xmlns="todo.list.app/svg"
-      >
-        <circle cx="150" cy="100" r="50" fill="red" />
-        <rect x="100" y="50" width="100" height="50" fill="blue" />
-        <line
-          x1="50"
-          y1="150"
-          x2="250"
-          y2="150"
-          stroke="green"
-          stroke-width="5"
-        />
-      </svg> */}
+      <img
+        src="assets/todo-list-logo.svg"
+        alt="Logo della lista di cose da fare"
+        width="200"
+        height="100"
+        className="todo-list-logo"
+      />
 
       <h1>CheckList</h1>
       <p>aggiungi un'azione da compiere</p>
