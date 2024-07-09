@@ -1,9 +1,9 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Hamburger from "../../assets/Hamburger.png";
-import todoListLogo from "../../assets/todo-list-logo-img.png";
-import CheckListLogo from "../../assets/CheckList logo.png";
-import ImmagineProfilo from "../../assets/immagine profilo.png";
+import Hamburger from "../assets/Hamburger.png";
+import todoListLogo from "../assets/todo-list-logo-img.png";
+import CheckListLogo from "../assets/CheckList logo.png";
+import ImmagineProfilo from "../assets/immagine profilo.png";
 import "./Header.css";
 
 const Header = () => {

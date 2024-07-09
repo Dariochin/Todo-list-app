@@ -1,6 +1,6 @@
-* {
+/* * {
   border: 1px solid red;
-}
+} */
 
 header {
   display: flex;
@@ -9,36 +9,14 @@ header {
   justify-content: space-around;
   height: 90px;
   background-color: #ffe794;
-}
-
-header ul {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  padding: 0;
-}
-
-header li {
-  list-style-type: none;
-  color: black;
-  font-size: 20px;
+  stroke: #FFD74D;
 }
 
 nav {
   display: flex;
   align-items: center;
-  width: 80%;
+  width: 90%;
   justify-content: space-between;
-}
-
-nav ul li {
-  text-decoration: none;
-  color: black;
-  transition: color 0.3s;
-}
-
-nav ul li:hover {
-  color: #a8dadc;
 }
 
 .logo__wrapper {
@@ -48,18 +26,33 @@ nav ul li:hover {
   align-items: center;
 }
 
-.logo__container__todoListLogo,
+.logo__container__todoListLogo {
+  width: 100px;
+  height: 46px;
+}
+
 .logo__container__ImmagineProfilo,
 .logo__container__hamburger {
   width: 50px;
   height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.logo__container__todoListLogo img,
-.logo__container__ImmagineProfilo img,
-.logo__container__hamburger img {
+.logo__container__todoListLogo img {
+  width: 100px;
+  height: 46px;
+}
+
+.logo__container__ImmagineProfilo img {
   width: 50px;
   height: 50px;
+}
+
+.logo__container__hamburger img {
+  width: 35px;
+  height: 30px;
 }
 
 .logo__container__CheckListLogo {
