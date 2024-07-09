@@ -9,7 +9,7 @@ header {
   justify-content: space-around;
   height: 90px;
   background-color: #ffe794;
-  stroke: #FFD74D;
+  border-bottom: 2px solid #ffd74d;
 }
 
 nav {
@@ -38,6 +38,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 .logo__container__todoListLogo img {
