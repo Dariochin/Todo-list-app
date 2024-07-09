@@ -1,0 +1,73 @@
+* {
+  border: 1px solid red;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 90px;
+  background-color: #ffe794;
+}
+
+header ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+}
+
+header li {
+  list-style-type: none;
+  color: black;
+  font-size: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  width: 80%;
+  justify-content: space-between;
+}
+
+nav ul li {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+nav ul li:hover {
+  color: #a8dadc;
+}
+
+.logo__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__container__todoListLogo,
+.logo__container__ImmagineProfilo,
+.logo__container__hamburger {
+  width: 50px;
+  height: 50px;
+}
+
+.logo__container__todoListLogo img,
+.logo__container__ImmagineProfilo img,
+.logo__container__hamburger img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo__container__CheckListLogo {
+  width: 64px;
+  height: 26px;
+}
+
+.logo__container__CheckListLogo img {
+  width: 64px;
+  height: 26px;
+}

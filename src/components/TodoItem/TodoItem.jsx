@@ -1,13 +1,16 @@
-import React from 'react';
+/* import React from 'react';
+import "./TodoItem.css";
 
-function TodoItem({ todo, index, toggleTodo, removeTodo }) {
+const TodoItem = ({ todo, toggleTodo }) => {
   return (
-    <li style={{ textDecoration: todo.completed ? 'line-through' : '' }}>
+    <li
+      style={{ textDecoration: todo.completed ? 'line-through' : 'none' }}
+      onClick={() => toggleTodo(todo.id)}
+    >
       {todo.text}
-      <button onClick={() => toggleTodo(index)}>Toggle</button>
-      <button onClick={() => removeTodo(index)}>Remove</button>
     </li>
   );
-}
+};
 
 export default TodoItem;
+ */

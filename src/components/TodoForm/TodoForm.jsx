@@ -1,25 +1,31 @@
-import React, { useState } from 'react';
+/* import React, { useState } from 'react';
+import "./TodoForm.css";
 
-function TodoForm({ addTodo }) {/* 
+const TodoForm = ({ addTodo }) => {
   const [value, setValue] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
     if (!value) return;
-    addTodo(value);
+    addTodo({
+      id: Date.now(),
+      text: value,
+      completed: false
+    });
     setValue('');
-  }; */
+  };
 
   return (
-    <form /* onSubmit={handleSubmit} */>
+    <form onSubmit={handleSubmit}>
       <input
-        type="text"/* 
+        type="text"
         value={value}
-        onChange={(e) => setValue(e.target.value)} */
+        onChange={e => setValue(e.target.value)}
+        placeholder="Add a new todo"
       />
-      <button /* type="submit" */>Aggiungi</button>
+      <button type="submit">Add</button>
     </form>
   );
-}
+};
 
-export default TodoForm;
+export default TodoForm; */
