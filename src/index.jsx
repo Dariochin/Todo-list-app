@@ -1,14 +1,14 @@
 import React, { StrictMode } from 'react';
 import App from "./App";
 import "./index.css";
-import Header from "./components/Header";
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import Sidebar from "./components/Sidebar"
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Header />,
+    element: <Sidebar />,
     children: [
       {
         index: true,

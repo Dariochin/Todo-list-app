@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import { Outlet } from "react-router-dom";
 import Hamburger from "../assets/Hamburger.png";
 import todoListLogo from "../assets/todo-list-logo-img.png";
@@ -19,16 +19,16 @@ const Header = () => {
               <img src={todoListLogo} alt="todoListLogo" />
             </div>
             <div
-              className="logo__container__CheckListLogo" /* onClick={handleToggle} */
+              className="logo__container__CheckListLogo" 
             >
               <img src={CheckListLogo} alt="CheckListLogo" />
-              {/* {isOpen && (
+              {{isOpen && (
                 <div className="dropdown-menu__header">
                 <button className="dropdown-item__header" onClick={logOut}>
                 Esci
                 </button>
                 </div>
-                )} */}
+                )}}
             </div>
           </div>
           <div className="logo__container__ImmagineProfilo">
@@ -42,3 +42,4 @@ const Header = () => {
 };
 
 export default Header;
+ */
