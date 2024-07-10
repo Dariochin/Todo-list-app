@@ -4,11 +4,12 @@ import "./index.css";
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Sidebar from "./components/Sidebar"
+import Header from "./components/Header"
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Sidebar />,
+    element: <Header />,
     children: [
       {
         index: true,

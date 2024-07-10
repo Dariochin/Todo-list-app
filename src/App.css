@@ -87,10 +87,10 @@ main {
 
 /* Sidebar */
 .sidebar {
-  background: rgb(0, 7, 61);
+  background: #FFE794;
   color: white;
   height: 100vh;
-  overflow-y: auto;
+  /* overflow-y: auto; */
 }
 
 .top_section {

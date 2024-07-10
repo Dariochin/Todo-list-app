@@ -2,7 +2,7 @@ import React from "react";
 /* import TodoList from "../components/TodoList/TodoList"; */
 /* import TodoForm from "../components/TodoForm/TodoForm"; */
 /* import useTodos from '../hooks/useTodos'; */
-/* import Header from "../components/Header/Header"; */
+import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Content from "./components/Content";
 import './App.css';

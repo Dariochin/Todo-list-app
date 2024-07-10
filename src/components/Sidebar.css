@@ -1,3 +1,7 @@
-main-container {
-    height: 100vh;
+.main-container {
+    background-color: #FFE794;
+}
+
+.Sidebar {
+    background: #FFE794;
 }
