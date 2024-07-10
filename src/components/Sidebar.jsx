@@ -186,8 +186,7 @@ const Sidebar = ({ children }) => {
       <div className="main-container">
         <motion.div
           animate={{
-            width: isOpen ? "200px" : "45px",
-
+            width: isOpen ? "188px" : "50px",
             transition: {
               duration: 0.5,
               type: "spring",
@@ -196,82 +195,95 @@ const Sidebar = ({ children }) => {
           }}
           className={`sidebar `}
         >
-          <div className="top_section">
-            <AnimatePresence>
-              {isOpen && (
-                <motion.h1
-                  variants={showAnimation}
-                  initial="hidden"
-                  animate="show"
-                  exit="hidden"
-                  className="logo"
-                >
-                  DoSomeCoding
-                </motion.h1>
-              )}
-            </AnimatePresence>
+          <div>
+            <div className="top_section">
+              <AnimatePresence>
+                {isOpen && (
+                  <motion.h1
+                    variants={showAnimation}
+                    initial="hidden"
+                    animate="show"
+                    exit="hidden"
+                    className="logo"
+                  >
+                    <div>DoSomeCoding</div>
+                  </motion.h1>
+                )}
+              </AnimatePresence>
 
-            <div className="bars">
-              <FaBars onClick={toggle} />
+              <div className="hamburger">
+                <FaBars onClick={toggle} />
+              </div>
             </div>
-          </div>
-          <div className="search">
-            <div className="search_icon">
-              <BiSearch />
-            </div>
-            <AnimatePresence>
-              {isOpen && (
-                <motion.input
-                  initial="hidden"
-                  animate="show"
-                  exit="hidden"
-                  variants={inputAnimation}
-                  type="text"
-                  placeholder="Search"
-                />
-              )}
-            </AnimatePresence>
-          </div>
-          <section className="routes">
-            {routes.map((route, index) => {
-              if (route.subRoutes) {
-                return (
-                  <SidebarMenu
-                    setIsOpen={setIsOpen}
-                    route={route}
-                    showAnimation={showAnimation}
-                    isOpen={isOpen}
+            <div className="search">
+              <div className="search_icon">
+                <BiSearch />
+              </div>
+              <AnimatePresence>
+                {isOpen && (
+                  <motion.input
+                    initial="hidden"
+                    animate="show"
+                    exit="hidden"
+                    variants={inputAnimation}
+                    type="text"
+                    placeholder="Search"
                   />
-                );
-              }
+                )}
+              </AnimatePresence>
+            </div>
+            <section className="routes">
+              {routes.map((route, index) => {
+                if (route.subRoutes) {
+                  return (
+                    <SidebarMenu
+                      setIsOpen={setIsOpen}
+                      route={route}
+                      showAnimation={showAnimation}
+                      isOpen={isOpen}
+                    />
+                  );
+                }
 
-              return (
-                <NavLink
-                  to={route.path}
-                  key={index}
-                  className="link"
-                  activeClassName="active"
-                >
-                  <div className="icon">{route.icon}</div>
-                  <AnimatePresence>
-                    {isOpen && (
-                      <motion.div
-                        variants={showAnimation}
-                        initial="hidden"
-                        animate="show"
-                        exit="hidden"
-                        className="link_text"
-                      >
-                        {route.name}
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </NavLink>
-              );
-            })}
-          </section>
+                return (
+                  <NavLink
+                    to={route.path}
+                    key={index}
+                    className="link"
+                    activeClassName="active"
+                  >
+                    <div className="icon">{route.icon}</div>
+                    <AnimatePresence>
+                      {isOpen && (
+                        <motion.div
+                          variants={showAnimation}
+                          initial="hidden"
+                          animate="show"
+                          exit="hidden"
+                          className="link_text"
+                        >
+                          {route.name}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </NavLink>
+                );
+              })}
+            </section>
+          </div>
           <div className="Sidebar__ImmagineProfilo">
             <img src={ImmagineProfilo} alt="ImmagineProfilo" />
+            {isOpen && (
+              <motion.p
+                variants={showAnimation}
+                initial="hidden"
+                animate="show"
+                exit="hidden"
+                className="Profilo"
+              >
+                Profilo
+              </motion.p>
+            )}
           </div>
         </motion.div>
 
