@@ -21,30 +21,33 @@ const menuItems = [
 ];
 
 const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false); // Initial state: sidebar closed
+
   return (
     <div className={cx("sidebar", { "sidebar-closed": !isOpen })}>
-      <Searchbar />
-      <button className={"sidebar__button"} onClick={() => setIsOpen(!isOpen)}>
+      <button className="sidebar__button" onClick={() => setIsOpen(!isOpen)}>
         <FontAwesomeIcon icon={faBars} />
       </button>
-      <ul>
-        {menuItems.map((item) => (
-          <li key={item.title}>
-            <div className={"sidebar__listItem"}>
-              <FontAwesomeIcon className={"sidebar__icon"} icon={item.icon} />
-              <CSSTransition
-                in={isOpen}
-                timeout={200}
-                classNames={"fade"}
-                unmountOnExit
-              >
-                <span>{item.title}</span>
-              </CSSTransition>
-            </div>
-          </li>
-        ))}
-      </ul>
+      <div className="sidebar__content">
+        <Searchbar />
+        <ul>
+          {menuItems.map((item) => (
+            <li key={item.title}>
+              <div className={"sidebar__listItem"}>
+                <FontAwesomeIcon className={"sidebar__icon"} icon={item.icon} />
+                <CSSTransition
+                  in={isOpen}
+                  timeout={200}
+                  classNames={"fade"}
+                  unmountOnExit
+                >
+                  <span>{item.title}</span>
+                </CSSTransition>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };
