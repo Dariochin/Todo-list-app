@@ -3,3 +3,69 @@
   display: flex;
   height: 100vh;
 }
+
+.content {
+  padding: 40px 60px;
+}
+
+/* FADE ANIMATIONS */
+.fade-enter {
+  opacity: 0;
+}
+
+.fade-enter-active {
+  opacity: 1;
+  transition: opacity 400ms;
+}
+
+.fade-exit {
+  opacity: 1;
+}
+
+.fade-exit-active {
+  opacity: 0;
+  transition: opacity 400ms;
+}
+
+/* SIDEBAR */
+
+.sidebar__button {
+  background: transparent;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: white;
+  transition: 0.3s linear;
+}
+
+.sidebar {
+  min-width: 250px;
+  background: #FFE794;
+  padding: 20px;
+  color: white;
+  transition: 0.4s ease-in;
+  border-right: 2px solid #FFD74D;
+}
+
+.sidebar-closed {
+  min-width: 40px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar__listItem {
+  margin: 30px 10px;
+  display: flex;
+  height: 20px;
+}
+
+.sidebar__listItem span {
+  white-space: nowrap;
+}
+
+.sidebar__icon {
+  margin: 0 15px 0 0;
+}
