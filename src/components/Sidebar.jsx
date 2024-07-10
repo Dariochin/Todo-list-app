@@ -7,8 +7,9 @@ import {
   faUsers,
   faCogs,
   faServer,
-  faCloud
+  faCloud,
 } from "@fortawesome/free-solid-svg-icons";
+import Searchbar from "./Searchbar";
 import cx from "classnames";
 
 const menuItems = [
@@ -16,18 +17,19 @@ const menuItems = [
   { title: "Users", icon: faUsers },
   { title: "Cloud services", icon: faCloud },
   { title: "Usage data", icon: faCogs },
-  { title: "Server list", icon: faServer }
+  { title: "Server list", icon: faServer },
 ];
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(true);
   return (
     <div className={cx("sidebar", { "sidebar-closed": !isOpen })}>
+      <Searchbar />
       <button className={"sidebar__button"} onClick={() => setIsOpen(!isOpen)}>
         <FontAwesomeIcon icon={faBars} />
       </button>
       <ul>
-        {menuItems.map(item => (
+        {menuItems.map((item) => (
           <li key={item.title}>
             <div className={"sidebar__listItem"}>
               <FontAwesomeIcon className={"sidebar__icon"} icon={item.icon} />
