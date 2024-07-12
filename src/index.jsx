@@ -9,7 +9,7 @@ import Sidebar from "./components/Sidebar";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <App />,
+    element: <Sidebar />,
     children: [
       { index: true, element: <App />,},
     ],

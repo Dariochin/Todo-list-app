@@ -1,59 +1,3 @@
-/* import React, { useState } from "react";
-import { CSSTransition } from "react-transition-group";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBars,
-  faCompass,
-  faUsers,
-  faCogs,
-  faServer,
-  faCloud,
-} from "@fortawesome/free-solid-svg-icons";
-import Searchbar from "./Searchbar";
-import cx from "classnames";
-
-const menuItems = [
-  { title: "Dashboard", icon: faCompass },
-  { title: "Users", icon: faUsers },
-  { title: "Cloud services", icon: faCloud },
-  { title: "Usage data", icon: faCogs },
-  { title: "Server list", icon: faServer },
-];
-
-const Sidebar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  return (
-    <div className={cx("sidebar", { "sidebar-closed": !isOpen })}>
-      <button className="sidebar__button" onClick={() => setIsOpen(!isOpen)}>
-        <FontAwesomeIcon icon={faBars} />
-      </button>
-      <div className="sidebar__content">
-        <Searchbar />
-        <ul>
-          {menuItems.map((item) => (
-            <li key={item.title}>
-              <div className={"sidebar__listItem"}>
-                <FontAwesomeIcon className={"sidebar__icon"} icon={item.icon} />
-                <CSSTransition
-                  in={isOpen}
-                  timeout={200}
-                  classNames={"fade"}
-                  unmountOnExit
-                >
-                  <span>{item.title}</span>
-                </CSSTransition>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </div>
-  );
-};
-
-export default Sidebar;
- */
 import { NavLink } from "react-router-dom";
 import { FaBars, FaHome, FaLock, FaMoneyBill, FaUser } from "react-icons/fa";
 import { MdMessage } from "react-icons/md";
@@ -65,6 +9,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
 import ImmagineProfilo from "../assets/immagine profilo.png";
+import todoListLogo from "../assets/todo-list-logo-img.png";
 
 const routes = [
   {
@@ -186,7 +131,7 @@ const Sidebar = ({ children }) => {
       <div className="main-container">
         <motion.div
           animate={{
-            width: isOpen ? "188px" : "50px",
+            width: isOpen ? "186px" : "40px",
             transition: {
               duration: 0.5,
               type: "spring",
@@ -206,7 +151,9 @@ const Sidebar = ({ children }) => {
                     exit="hidden"
                     className="logo"
                   >
-                    <div>DoSomeCoding</div>
+                    <div>
+                      <img src={todoListLogo} alt="todoListLogo" />
+                    </div>
                   </motion.h1>
                 )}
               </AnimatePresence>
