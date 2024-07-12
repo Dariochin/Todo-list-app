@@ -1,4 +1,3 @@
-
 .sidebar {
   position: fixed;
   top: 0;
@@ -7,23 +6,66 @@
   height: 100vh;
   background-color: #222;
   color: #fff;
-  padding: 20px;
 }
 
 .sidebar-header {
+  height: 90px;
   display: flex;
   align-items: center;
   padding: 10px 0;
-  border-bottom: 1px solid #333;
+  justify-content: space-between;
 }
 
-.sidebar-header img {
+.logo__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo__container__TodoListLogo {
+  width: 100px;
+  height: 46px;
+}
+
+
+.logo__container__TodoListLogo img {
+  width: 100px;
+  height: 46px;
+}
+
+.logo__container__CheckListLogo {
+  width: 64px;
+  height: 26px;
+}
+
+.logo__container__CheckListLogo img {
+  width: 64px;
+  height: 26px;
+}
+
+.sidebar-toggle {
   width: 50px;
   height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
-.sidebar-header h3 {
-  margin: 0 10px;
+.sidebar-toggle img {
+  margin-left: 10px;
+}
+
+.sidebar-toggle img {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.sidebar-toggle img:hover {
+  filter: brightness(93%);
+  transition: filter 0.3s;
 }
 
 .sidebar-nav {
@@ -45,3 +87,4 @@
 .sidebar-nav a:hover {
   background-color: #333;
 }
+
