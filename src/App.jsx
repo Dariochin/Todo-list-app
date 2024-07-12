@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Draggable from "react-draggable";
@@ -9,6 +9,17 @@ const App = () => {
   const [showInput, setShowInput] = useState(false);
   const [newNote, setNewNote] = useState("");
   const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const storedNotes = localStorage.getItem("notes");
+    if (storedNotes) {
+      setNotes(JSON.parse(storedNotes));
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   const handleButtonClick = () => {
     setClickPosition({ x: window.innerWidth / 2, y: window.innerHeight / 2 });

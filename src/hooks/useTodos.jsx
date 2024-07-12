@@ -1,4 +1,4 @@
-import { useState } from 'react';
+/* import { useState } from 'react';
 
 const useTodos = initialTodos => {
   const [todos, setTodos] = useState(initialTodos);
@@ -23,3 +23,4 @@ const useTodos = initialTodos => {
 };
 
 export default useTodos;
+ */

@@ -1,4 +1,4 @@
-import React from "react";
+/* import React from "react";
 import "./Searchbar.css";
 
 const Searchbar = ({ onInput }) => {
@@ -33,4 +33,4 @@ const Searchbar = ({ onInput }) => {
   );
 };
 
-export default Searchbar;
+export default Searchbar; */

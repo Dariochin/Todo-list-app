@@ -6,26 +6,16 @@ import App from "./App";
 import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Profilo from "./pages/Profilo"
+import Impostazioni from "./pages/Impostazioni"
 
 const router = createBrowserRouter([
   {
-    path: '/',
+    path: "/",
     element: <Header />,
     children: [
       { path: "/", index: true, element: <App /> },
-
-      {
-        path: '/Profilo',
-        element: <Profilo />,
-      },
-      /* {
-        path: '/cart',
-        element: <Cart />,
-      },
-      {
-        path: '/products/:id',
-        element: <Product />,
-      }, */
+      { path: "/Profilo", element: <Profilo /> },
+      { path: "/Impostazioni", element: <Impostazioni /> },
     ],
   },
 ]);
