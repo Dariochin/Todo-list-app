@@ -151,9 +151,7 @@ const Sidebar = ({ children }) => {
                     exit="hidden"
                     className="logo"
                   >
-                    <div>
-                      <img src={todoListLogo} alt="todoListLogo" />
-                    </div>
+                    <div>App</div>
                   </motion.h1>
                 )}
               </AnimatePresence>
@@ -233,7 +231,6 @@ const Sidebar = ({ children }) => {
             )}
           </div>
         </motion.div>
-
         <main>{children}</main>
       </div>
     </>

@@ -1,17 +1,31 @@
 import React, { StrictMode } from "react";
-import App from "./App";
-import "./index.css";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "./index.css";
+import App from "./App";
 import Sidebar from "./components/Sidebar";
-/* import Header from "./components/Header"; */
+import Header from "./components/Header";
+import Profilo from "./pages/Profilo"
 
 const router = createBrowserRouter([
   {
-    path: "/",
-    element: <Sidebar />,
+    path: '/',
+    element: <Header />,
     children: [
-      { index: true, element: <App />,},
+      { path: "/", index: true, element: <App /> },
+
+      {
+        path: '/Profilo',
+        element: <Profilo />,
+      },
+      /* {
+        path: '/cart',
+        element: <Cart />,
+      },
+      {
+        path: '/products/:id',
+        element: <Product />,
+      }, */
     ],
   },
 ]);

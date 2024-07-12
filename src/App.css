@@ -1,5 +1,5 @@
 * {
-  /* border: solid 1px red; */
+  border: solid 1px red;
   box-sizing: border-box;
   font-family: "Inter", sans-serif;
   margin: 0;
@@ -21,6 +21,9 @@
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  position: fixed;
+  display: flex;
+  z-index: 3;
 }
 
 .overlay {
@@ -196,4 +199,11 @@ main {
   height: 30px;
   font-size: 15px;
   color: black;
+}
+
+.note svg{
+  width: max-content;
+  height: max-content;
+  position: absolute;
+  z-index: 0;
 }

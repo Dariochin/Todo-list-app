@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
 import Hamburger from "../assets/Hamburger.png";
-import todoListLogo from "../assets/todo-list-logo-img.png";
+import TodoListLogo from "../assets/todo-list-logo-img.png";
 import CheckListLogo from "../assets/CheckList logo.png";
 import ImmagineProfilo from "../assets/immagine profilo.png";
 import "./Header.css";
@@ -11,24 +11,15 @@ const Header = () => {
     <>
       <header>
         <nav>
-          <div className="logo__container__hamburger">
+          <div className="logo__container__Hamburger">
             <img src={Hamburger} alt="Hamburger" />
           </div>
           <div className="logo__wrapper">
-            <div className="logo__container__todoListLogo">
-              <img src={todoListLogo} alt="todoListLogo" />
+            <div className="logo__container__TodoListLogo">
+              <img src={TodoListLogo} alt="TodoListLogo" />
             </div>
-            <div
-              className="logo__container__CheckListLogo" 
-            >
+            <div className="logo__container__CheckListLogo">
               <img src={CheckListLogo} alt="CheckListLogo" />
-              {/* {{isOpen && (
-                <div className="dropdown-menu__header">
-                <button className="dropdown-item__header" onClick={logOut}>
-                Esci
-                </button>
-                </div>
-                )}} */}
             </div>
           </div>
           <div className="logo__container__ImmagineProfilo">
