@@ -1,9 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
-import Hamburger from "../assets/Hamburger.png";
-import TodoListLogo from "../assets/todo-list-logo-img.png";
-import CheckListLogo from "../assets/CheckList logo.png";
 
 const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
   const handleToggleSidebar = () => {
@@ -13,35 +10,27 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
   return (
     <div className={isSidebarOpen ? "sidebar dropdown-open" : "sidebar"}>
       <div className="sidebar-header">
-        <div className="logo__wrapper">
-          <div className="logo__container__TodoListLogo">
-            <img src={TodoListLogo} alt="TodoListLogo" />
-          </div>
-          <div className="logo__container__CheckListLogo">
-            <img src={CheckListLogo} alt="CheckListLogo" />
-          </div>
-        </div>
-        <div
-          className="logo__container__Hamburger"
-          onClick={handleToggleSidebar}
-        >
-          <img src={Hamburger} alt="Hamburger" />
+        <div className="logo__container__Close" onClick={handleToggleSidebar}>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg>
         </div>
       </div>
 
-      <nav className="sidebar-nav">
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/Profilo">Profilo</Link>
-          </li>
-          <li>
-            <Link to="/Impostazioni">Impostazioni</Link>
-          </li>
-        </ul>
-      </nav>
+      <div className="sidebar-list-container">
+        <h3>Le tue liste</h3>
+        <nav className="sidebar-nav">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/Profilo">Profilo</Link>
+            </li>
+            <li>
+              <Link to="/Impostazioni">Impostazioni</Link>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </div>
   );
 };

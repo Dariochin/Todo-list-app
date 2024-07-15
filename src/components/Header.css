@@ -7,7 +7,7 @@ header {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 90px;
+  height: 56px;
   background-color: #ffe794;
   border-bottom: 2px solid #ffd74d;
 }
@@ -21,21 +21,23 @@ nav {
 
 .logo__container__ImmagineProfilo,
 .logo__container__Hamburger {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
+  padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
 
-.logo__container__Hamburger img {
+.logo__container__Hamburger svg {
   width: 35px;
   height: 30px;
   cursor: pointer;
+  fill: black;
 }
 
-.logo__container__Hamburger img:hover {
+.logo__container__Hamburger svg:hover {
   filter: brightness(93%);
   transition: filter 0.3s;
 }
@@ -50,8 +52,8 @@ nav {
 .logo__container__TodoListLogo {
   width: 100px;
   height: 46px;
+  padding: 8px;
 }
-
 
 .logo__container__TodoListLogo img {
   width: 100px;
@@ -61,6 +63,7 @@ nav {
 .logo__container__CheckListLogo {
   width: 64px;
   height: 26px;
+  padding: 8px;
 }
 
 .logo__container__CheckListLogo img {
@@ -69,8 +72,8 @@ nav {
 }
 
 .logo__container__ImmagineProfilo img {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
 }
 
