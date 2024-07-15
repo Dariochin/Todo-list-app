@@ -1,12 +1,14 @@
 .sidebar {
   position: fixed;
+  margin: 0;
   top: 0;
   left: 0;
   width: 200px;
   height: 100vh;
+  padding-left:20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   background: #ffe794;
   color: #ffd74d;
   border-right: 2px solid #ffd74d;
@@ -17,8 +19,17 @@
   gap: 20px;
   display: flex;
   align-items: center;
+  position: relative;
+  right: 30px;
   padding: 10px 0;
   justify-content: space-between;
+}
+
+.logo__container__Close {
+  width: 35px;
+  height: 30px;
+  padding-left: 80px;
+  margin-left: 90px;
 }
 
 .logo__container__Close svg {
@@ -44,4 +55,9 @@
 
 .sidebar-toggle img {
   margin-left: 10px;
+}
+
+.sidebar-nav ul li{
+  list-style: none;
+  gap: 10px;
 }

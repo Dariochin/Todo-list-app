@@ -1,4 +1,4 @@
-/* import React from 'react';
+import React from 'react';
 import TodoItem from '../TodoItem/TodoItem';
 import "./TodoList.css";
 
@@ -13,4 +13,3 @@ const TodoList = ({ todos, toggleTodo }) => {
 };
 
 export default TodoList;
- */
