@@ -26,14 +26,19 @@ body {
   position: fixed;
   bottom: 30px;
   right: 30px;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background-color: #ffe794;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 3;
+}
+
+.btn__aggiungiNota:hover {
+  filter: brightness(93%);
+  transition: 0.3s;
 }
 
 .overlay {
@@ -75,9 +80,22 @@ body {
   width: 100%;
 }
 
-.input-section textarea {
+.input-section input {
+  text-decoration: none;
+  border: none;
   width: 100%;
-  height: 60px;
+  height: 30px;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 16px;
+  background-color: #ebc190;
+}
+
+.input-section textarea {
+  text-decoration: none;
+  border: none;
+  width: 100%;
+  height: 120px;
   padding: 10px;
   border-radius: 3px;
   font-size: 16px;
@@ -93,6 +111,8 @@ body {
 .tipologia {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .container__conferma {
@@ -110,7 +130,7 @@ body {
   font-size: 16px;
   background-color: #ff4d4d;
   color: white;
-  width: 100px;
+  width: 110px;
   height: 35px;
 }
 
@@ -126,7 +146,7 @@ body {
   font-size: 16px;
   background-color: #4caf50;
   color: white;
-  width: 100px;
+  width: 110px;
   height: 35px;
 }
 
@@ -136,30 +156,28 @@ body {
 }
 
 .note {
-  width: 200px;
-  height: 150px;
-  padding: 15px;
+  width: 234px;
+  height: 234px;
+  padding: 20px;
   border-radius: 5px;
   background-color: white;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  position: absolute;
   cursor: grab;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  align-items: start;
   text-align: center;
   background: transparent;
-}
-
-.note span {
-  font-size: 16px;
-  white-space: pre-wrap;
+  gap: 20px;
 }
 
 .note svg {
-  width: max-content;
-  height: max-content;
   position: absolute;
-  z-index: 0;
+}
+
+.container-svg svg {
+  position: absolute;
+  left: -55px;
+  bottom: -10px;
+  z-index: -100;
 }

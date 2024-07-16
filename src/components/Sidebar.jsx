@@ -32,7 +32,7 @@ const Sidebar = ({
       </div>
 
       <div className="sidebar-list-container">
-        <h3>Le tue liste</h3>
+        <h3 style={{ color: "black" }}>Le tue liste</h3>
         <TodoList todos={todos} toggleTodo={toggleTodo} />
       </div>
     </div>
