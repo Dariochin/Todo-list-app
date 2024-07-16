@@ -1,5 +1,4 @@
 * {
-  border: 1px solid red;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -22,8 +21,8 @@ nav {
   align-items: center;
   width: 95%;
   justify-content: space-between;
- align-items: center;
- margin: 1rem;
+  align-items: center;
+  margin: 1rem;
 }
 
 .Header__Start {
