@@ -1,82 +1,9 @@
-* {
-  border: solid 1px red;
-  box-sizing: border-box;
-  font-family: "Inter", sans-serif;
+body {
+  border: 0;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.App {
-  width: 100vw;
-  height: 100vh;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.center-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  position: fixed;
-  display: flex;
-  z-index: 3;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.3);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.input-section {
-  background: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: absolute;
-  transform: translate(-50%, -50%);
-}
-
-.input-section textarea {
-  width: 100%;
-  height: 60px;
-  margin-bottom: 10px;
-}
-
-.input-section button {
-  margin: 5px;
-}
-
-.note {
-  width: 150px;
-  height: 150px;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 5px;
-  cursor: move;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-<<<<<<< HEAD
-  background: transparent; /* Rimuove il background giallo */
-=======
-  background: transparent;
->>>>>>> parent of b285d97 (css)
-}
-
-main {
-  padding: 10px;
+  font-family: "Inter", sans-serif;
 }
 
 .title {
@@ -85,30 +12,22 @@ main {
   place-items: center;
 }
 
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  background: #ffe794;
-  color: #ffd74d;
-  height: 100vh;
-  border-right: 2px solid #ffd74d;
-}
-
 .top_section {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 15px 10px;
 }
+
 .logo {
   font-size: 18px;
   line-height: 0;
 }
+
 .hamburger {
   cursor: pointer;
 }
+
 .hide {
   display: none;
 }
@@ -203,11 +122,4 @@ main {
   height: 30px;
   font-size: 15px;
   color: black;
-}
-
-.note svg{
-  width: max-content;
-  height: max-content;
-  position: absolute;
-  z-index: 0;
 }

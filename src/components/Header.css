@@ -1,41 +1,28 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 * {
-  border: 1px solid red;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
-=======
-/* * {
-  border: 1px solid red;
-} */
->>>>>>> parent of 46c8371 (css)
-=======
-/* * {
-  border: 1px solid red;
-} */
->>>>>>> parent of 46c8371 (css)
 
 header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 90px;
+  width: 100%;
+  height: 56px;
   background-color: #ffe794;
   border-bottom: 2px solid #ffd74d;
 }
 
 nav {
+  height: 56px;
   display: flex;
   align-items: center;
   width: 95%;
   justify-content: space-between;
-<<<<<<< HEAD
-<<<<<<< HEAD
- align-items: center;
- margin: 1rem;
+  align-items: center;
+  margin: 1rem;
 }
 
 .Header__Start {
@@ -43,29 +30,25 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-=======
->>>>>>> parent of 46c8371 (css)
-=======
->>>>>>> parent of 46c8371 (css)
 }
 
-.logo__container__ImmagineProfilo,
 .logo__container__Hamburger {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
 }
 
-.logo__container__Hamburger img {
+.logo__container__Hamburger svg {
   width: 35px;
   height: 30px;
   cursor: pointer;
+  fill: black;
 }
 
-.logo__container__Hamburger img:hover {
+.logo__container__Hamburger svg:hover {
   filter: brightness(93%);
   transition: filter 0.3s;
 }
@@ -75,32 +58,44 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 56px;
 }
 
 .logo__container__TodoListLogo {
-  width: 100px;
-  height: 46px;
+  width: 65px;
+  height: 32px;
+  position: relative;
 }
 
-
 .logo__container__TodoListLogo img {
-  width: 100px;
-  height: 46px;
+  width: 65px;
+  height: 32px;
+  margin-top: 1px;
 }
 
 .logo__container__CheckListLogo {
-  width: 64px;
-  height: 26px;
+  width: 50px;
+  height: 18px;
+  position: relative;
+  bottom: 3px;
 }
 
 .logo__container__CheckListLogo img {
-  width: 64px;
-  height: 26px;
+  width: 50px;
+  height: 18px;
+}
+
+.logo__container__ImmagineProfilo {
+  width: 60px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo__container__ImmagineProfilo img {
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
   cursor: pointer;
 }
 
