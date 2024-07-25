@@ -3,6 +3,7 @@ import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App";
+import Sidebar from "./components/Sidebar";
 import Header from "./components/Header";
 import Profilo from "./pages/Profilo"
 import Impostazioni from "./pages/Impostazioni"

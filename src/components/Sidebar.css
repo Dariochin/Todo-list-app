@@ -1,48 +1,47 @@
 .sidebar {
   position: fixed;
-  margin: 0;
   top: 0;
   left: 0;
   width: 200px;
   height: 100vh;
-  padding-left:20px;
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  background: #ffe794;
-  color: #ffd74d;
-  border-right: 2px solid #ffd74d;
-  gap: 20px;
-  z-index: 100;
+  background-color: #222;
+  color: #fff;
 }
 
 .sidebar-header {
-  gap: 20px;
+  height: 90px;
   display: flex;
   align-items: center;
-  position: relative;
-  right: 30px;
   padding: 10px 0;
   justify-content: space-between;
 }
 
-.logo__container__Close {
-  width: 35px;
-  height: 30px;
-  padding-left: 80px;
-  margin-left: 90px;
+.logo__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.logo__container__Close svg {
-  width: 35px;
-  height: 30px;
-  cursor: pointer;
-  fill: black;
+.logo__container__TodoListLogo {
+  width: 100px;
+  height: 46px;
 }
 
-.logo__container__Close svg:hover {
-  filter: brightness(93%);
-  transition: filter 0.3s;
+
+.logo__container__TodoListLogo img {
+  width: 100px;
+  height: 46px;
+}
+
+.logo__container__CheckListLogo {
+  width: 64px;
+  height: 26px;
+}
+
+.logo__container__CheckListLogo img {
+  width: 64px;
+  height: 26px;
 }
 
 .sidebar-toggle {
@@ -58,7 +57,34 @@
   margin-left: 10px;
 }
 
-.sidebar-nav ul li{
-  list-style: none;
-  gap: 10px;
+.sidebar-toggle img {
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
 }
+
+.sidebar-toggle img:hover {
+  filter: brightness(93%);
+  transition: filter 0.3s;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 10px;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar-nav a:hover {
+  background-color: #333;
+}
+

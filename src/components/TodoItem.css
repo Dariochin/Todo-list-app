@@ -1,0 +1,14 @@
+/* 
+  
+  .todo-text {
+    flex: 1; 
+    font-size: 16px;
+  }
+  
+  .todo-text.completed {
+    text-decoration: line-through;
+    color: #ccc;
+  }
+  
+ 
+   */
