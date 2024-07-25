@@ -68,7 +68,11 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+<<<<<<< HEAD
   background: transparent; /* Rimuove il background giallo */
+=======
+  background: transparent;
+>>>>>>> parent of b285d97 (css)
 }
 
 main {

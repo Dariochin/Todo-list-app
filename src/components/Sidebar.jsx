@@ -1,16 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
-import TodoList from "./TodoList";
-import TodoForm from "./TodoForm";
 
-const Sidebar = ({
-  isSidebarOpen,
-  toggleSidebar,
-  todos,
-  toggleTodo,
-  addTodo,
-}) => {
+const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
   const handleToggleSidebar = () => {
     toggleSidebar();
   };
@@ -32,8 +24,25 @@ const Sidebar = ({
       </div>
 
       <div className="sidebar-list-container">
+<<<<<<< HEAD
         <h3 style={{ color: "black" }}>Le tue liste</h3>
         <TodoList todos={todos} toggleTodo={toggleTodo} />
+=======
+        <h3>Le tue liste</h3>
+        <nav className="sidebar-nav">
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/Profilo">Profilo</Link>
+            </li>
+            <li>
+              <Link to="/Impostazioni">Impostazioni</Link>
+            </li>
+          </ul>
+        </nav>
+>>>>>>> parent of b285d97 (css)
       </div>
     </div>
   );

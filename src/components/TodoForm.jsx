@@ -1,32 +1,27 @@
+<<<<<<< HEAD
 /* import React, { useState } from "react";
 import Draggable from "react-draggable";
+=======
+import React, { useState } from 'react';
+>>>>>>> parent of b285d97 (css)
 import "./TodoForm.css";
 
-const TodoForm = ({ notes, setNotes }) => {
-  const [showInput, setShowInput] = useState(false);
-  const [newNote, setNewNote] = useState("");
-  const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
+const TodoForm = ({ addTodo }) => {
+  const [value, setValue] = useState('');
 
-  const handleButtonClick = () => {
-    setClickPosition({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
-    setShowInput(true);
-  };
-
-  const handleConfirm = () => {
-    setNotes([
-      ...notes,
-      { text: newNote, x: clickPosition.x, y: clickPosition.y },
-    ]);
-    setShowInput(false);
-    setNewNote("");
-  };
-
-  const handleCancel = () => {
-    setShowInput(false);
-    setNewNote("");
+  const handleSubmit = e => {
+    e.preventDefault();
+    if (!value) return;
+    addTodo({
+      id: Date.now(),
+      text: value,
+      completed: false
+    });
+    setValue('');
   };
 
   return (
+<<<<<<< HEAD
     <div className="App">
       <button className="btn__aggiungiNota" onClick={handleButtonClick}>
         <svg
@@ -477,6 +472,17 @@ const TodoForm = ({ notes, setNotes }) => {
         </Draggable>
       ))}
     </div>
+=======
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={value}
+        onChange={e => setValue(e.target.value)}
+        placeholder="Add a new todo"
+      />
+      <button type="submit">Add</button>
+    </form>
+>>>>>>> parent of b285d97 (css)
   );
 };
 
