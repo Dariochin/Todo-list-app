@@ -5,6 +5,7 @@
   width: 200px;
   height: 100vh;
 <<<<<<< HEAD
+<<<<<<< HEAD
   padding-left:20px;
   display: flex;
   flex-direction: column;
@@ -13,6 +14,10 @@
   color: #ffd74d;
   border-right: 2px solid #ffd74d;
   gap: 20px;
+=======
+  background-color: #222;
+  color: #fff;
+>>>>>>> parent of 46c8371 (css)
 =======
   background-color: #222;
   color: #fff;

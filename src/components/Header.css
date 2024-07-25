@@ -1,10 +1,16 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 * {
   border: 1px solid red;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+=======
+/* * {
+  border: 1px solid red;
+} */
+>>>>>>> parent of 46c8371 (css)
 =======
 /* * {
   border: 1px solid red;
@@ -27,6 +33,7 @@ nav {
   width: 95%;
   justify-content: space-between;
 <<<<<<< HEAD
+<<<<<<< HEAD
  align-items: center;
  margin: 1rem;
 }
@@ -36,6 +43,8 @@ nav {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+=======
+>>>>>>> parent of 46c8371 (css)
 =======
 >>>>>>> parent of 46c8371 (css)
 }

@@ -2,6 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import Hamburger from "../assets/Hamburger.png";
+import TodoListLogo from "../assets/todo-list-logo-img.png";
+import CheckListLogo from "../assets/CheckList logo.png";
+>>>>>>> parent of 46c8371 (css)
 =======
 import Hamburger from "../assets/Hamburger.png";
 import TodoListLogo from "../assets/todo-list-logo-img.png";
@@ -33,6 +39,7 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
       </div>
 
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className="sidebar-list-container">
 <<<<<<< HEAD
         <h3 style={{ color: "black" }}>Le tue liste</h3>
@@ -55,6 +62,8 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
 >>>>>>> parent of b285d97 (css)
       </div>
 =======
+=======
+>>>>>>> parent of 46c8371 (css)
       <nav className="sidebar-nav">
         <ul>
           <li>
@@ -68,6 +77,9 @@ const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
           </li>
         </ul>
       </nav>
+<<<<<<< HEAD
+>>>>>>> parent of 46c8371 (css)
+=======
 >>>>>>> parent of 46c8371 (css)
     </div>
   );

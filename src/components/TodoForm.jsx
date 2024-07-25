@@ -1,10 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* import React, { useState } from "react";
 import Draggable from "react-draggable";
 =======
 import React, { useState } from 'react';
 >>>>>>> parent of b285d97 (css)
+=======
+/* import React, { useState } from 'react';
+>>>>>>> parent of 46c8371 (css)
 =======
 /* import React, { useState } from 'react';
 >>>>>>> parent of 46c8371 (css)
@@ -25,6 +29,7 @@ const TodoForm = ({ addTodo }) => {
   };
 
   return (
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <div className="App">
@@ -492,6 +497,21 @@ const TodoForm = ({ notes, setNotes }) => {
 };
 
 export default TodoForm;
+=======
+    <form onSubmit={handleSubmit}>
+      <input
+        type="text"
+        value={value}
+        onChange={e => setValue(e.target.value)}
+        placeholder="Add a new todo"
+      />
+      <button type="submit">Add</button>
+    </form>
+  );
+};
+
+export default TodoForm; */
+>>>>>>> parent of 46c8371 (css)
 =======
     <form onSubmit={handleSubmit}>
       <input

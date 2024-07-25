@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import TodoItem from "./TodoItem";
 =======
@@ -10,11 +11,16 @@ import TodoItem from '../TodoItem/TodoItem';
 /* import React from 'react';
 import TodoItem from '../TodoItem/TodoItem';
 >>>>>>> parent of 46c8371 (css)
+=======
+/* import React from 'react';
+import TodoItem from '../TodoItem/TodoItem';
+>>>>>>> parent of 46c8371 (css)
 import "./TodoList.css";
 
 const TodoList = ({ todos, toggleTodo }) => {
   return (
     <ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
       {todos && todos.length > 0 ? (
@@ -29,6 +35,11 @@ const TodoList = ({ todos, toggleTodo }) => {
         <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} />
       ))}
 >>>>>>> parent of b285d97 (css)
+=======
+      {todos.map(todo => (
+        <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} />
+      ))}
+>>>>>>> parent of 46c8371 (css)
 =======
       {todos.map(todo => (
         <TodoItem key={todo.id} todo={todo} toggleTodo={toggleTodo} />
