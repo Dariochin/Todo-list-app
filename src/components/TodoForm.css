@@ -1,6 +1,6 @@
-* {
+/* * {
   border: 1px red solid;
-}
+} */
 
 body {
   margin: 0;
@@ -16,14 +16,13 @@ body {
   justify-content: right;
   align-items: end;
   padding: 30px;
-  position: sticky;
   overflow: hidden;
   background-color: #f6dfc4;
 }
 
 .btn__aggiungiNota {
   cursor: pointer;
-  position: fixed;
+  position: relative;
   bottom: 30px;
   right: 30px;
   width: 40px;
@@ -33,7 +32,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  z-index: 4;
 }
 
 .btn__aggiungiNota:hover {
@@ -45,12 +44,15 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 0;
   width: 100vw;
   height: 100vh;
   background: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 3;
 }
 
 .showInput .overlay {
@@ -80,7 +82,7 @@ body {
   width: 100%;
 }
 
-.input-section input {
+.testo__titolo input {
   text-decoration: none;
   border: none;
   width: 100%;
@@ -91,7 +93,7 @@ body {
   background-color: #ebc190;
 }
 
-.input-section textarea {
+.testo__descrizione textarea {
   text-decoration: none;
   border: none;
   width: 100%;
@@ -135,7 +137,7 @@ body {
 }
 
 .btn__annulla:hover {
-  background-color: #dc3545;
+  background-color: #c02837;
   transition: background-color 0.2s ease-in-out;
 }
 
@@ -156,28 +158,23 @@ body {
 }
 
 .note {
-  width: 234px;
-  height: 234px;
-  padding: 20px;
-  border-radius: 5px;
-  background-color: white;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  cursor: grab;
+  width: 100px;
+  height: 100px;
+  padding: 10px 10px 15px 10px;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   align-items: start;
-  text-align: center;
-  background: transparent;
-  gap: 20px;
-}
-
-.note svg {
+  text-align: start;
+  gap: 10px;
   position: absolute;
 }
 
 .container-svg svg {
+  width: 100px;
+  height: 100px;
   position: absolute;
-  left: -55px;
-  bottom: -10px;
+  left: -1px;
+  bottom: -1px;
   z-index: -100;
 }

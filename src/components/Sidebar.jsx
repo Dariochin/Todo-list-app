@@ -1,8 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Sidebar.css";
 import TodoList from "./TodoList";
-import TodoForm from "./TodoForm";
 
 const Sidebar = ({
   isSidebarOpen,
@@ -16,7 +14,10 @@ const Sidebar = ({
   };
 
   return (
-    <div className={isSidebarOpen ? "sidebar dropdown-open" : "sidebar"}>
+    <div 
+      className={isSidebarOpen ? "sidebar dropdown-open" : "sidebar"}
+      style={{ position: 'fixed', zIndex: 2 }}
+    >
       <div className="sidebar-header">
         <div className="logo__container__Close" onClick={handleToggleSidebar}>
           <svg
