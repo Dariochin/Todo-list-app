@@ -16,7 +16,7 @@ const Sidebar = ({
   return (
     <div 
       className={isSidebarOpen ? "sidebar dropdown-open" : "sidebar"}
-      style={{ position: 'fixed', zIndex: 2 }}
+      style={{ position: 'fixed', zIndex: 3 }}
     >
       <div className="sidebar-header">
         <div className="logo__container__Close" onClick={handleToggleSidebar}>

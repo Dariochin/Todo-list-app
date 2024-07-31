@@ -13,6 +13,8 @@ header {
   height: 56px;
   background-color: #ffe794;
   border-bottom: 2px solid #ffd74d;
+  position: relative;
+  z-index: 1;
 }
 
 nav {

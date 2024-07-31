@@ -64,6 +64,13 @@ const TodoForm = ({ notes, setNotes }) => {
     }
   };
 
+  const handleDeleteNote = (index, event) => {
+    // Previene la propagazione dell'evento, evitando l'attivazione dell'editing
+    event.stopPropagation();
+    const updatedNotes = notes.filter((_, i) => i !== index);
+    setNotes(updatedNotes);
+  };
+
   const handleDragStart = () => {
     dragStartTime.current = Date.now();
   };
@@ -145,89 +152,105 @@ const TodoForm = ({ notes, setNotes }) => {
               <button className="btn__conferma" onClick={handleConfirm}>
                 {editingNoteIndex !== null ? "Modifica" : "Conferma"}
               </button>
+              <button
+                className="delete-button"
+                onClick={() => handleDeleteNote(editingNoteIndex)}
+                style={{
+                  position: "absolute",
+                  top: "10px",
+                  right: "10px",
+                  background: "none",
+                  border: "none",
+                  cursor: "pointer",
+                  fontSize: "14px",
+                  color: "red",
+                }}
+              >
+                ×
+              </button>
             </div>
           </div>
         </div>
       )}
-        {notes.map((note, index) => (
-          <Draggable
-            key={index}
-            onStart={handleDragStart}
-            onStop={(e) => handleEditNote(index, e)}
+      {notes.map((note, index) => (
+        <Draggable
+          key={index}
+          onStart={handleDragStart}
+          onStop={(e) => handleEditNote(index, e)}
+        >
+          <div
+            className="note"
+            style={{
+              top: note.y,
+              left: note.x,
+            }}
           >
+            <span style={{ fontSize: "9px" }}>{note.title}</span>
+            <span style={{ fontSize: "7px" }}>{note.text}</span>
             <div
-              className="note"
-              style={{
-                top: note.y,
-                left: note.x,
-              }}
+              className="container-svg"
+              onClick={() => handleEditNote(index)}
             >
-              <span style={{ fontSize: "9px" }}>{note.title}</span>
-              <span style={{ fontSize: "7px" }}>{note.text}</span>
-              <div
-                className="container-svg"
-                onClick={() => handleEditNote(index)}
+              <svg
+                width="408"
+                height="408"
+                viewBox="0 0 408 408"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                <svg
-                  width="408"
-                  height="408"
-                  viewBox="0 0 408 408"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <g filter="url(#filter0_d_198_107)">
-                    <path
-                      d="M399 9.40036C364.655 9.00542 126.769 7.59023 12.1196 6.93201C8.92468 31.0231 8.79156 276.97 9.12436 396.932C52.2553 396.932 285.681 396.603 397.003 396.438C395.805 359.709 397.835 123.109 399 9.40036Z"
-                      fill="#FFF68B"
-                    />
-                  </g>
+                <g filter="url(#filter0_d_198_107)">
                   <path
-                    opacity="0.02"
-                    d="M399 9.49754C364.567 9.41864 127.073 7.0635 12.1291 6.93201C11.0026 27.6665 10.5 52.9564 10 84.8436C53.2415 84.8436 286.393 84.959 398 84.9261C398.5 62.4474 398.501 32.2522 399 9.49754Z"
-                    fill="#222222"
+                    d="M399 9.40036C364.655 9.00542 126.769 7.59023 12.1196 6.93201C8.92468 31.0231 8.79156 276.97 9.12436 396.932C52.2553 396.932 285.681 396.603 397.003 396.438C395.805 359.709 397.835 123.109 399 9.40036Z"
+                    fill="#FFF68B"
                   />
-                  <defs>
-                    <filter
-                      id="filter0_d_198_107"
-                      x="3"
-                      y="6.93201"
-                      width="400"
-                      height="400"
-                      filterUnits="userSpaceOnUse"
-                      color-interpolation-filters="sRGB"
-                    >
-                      <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                      <feColorMatrix
-                        in="SourceAlpha"
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                        result="hardAlpha"
-                      />
-                      <feOffset dx="-1" dy="5" />
-                      <feGaussianBlur stdDeviation="2.5" />
-                      <feComposite in2="hardAlpha" operator="out" />
-                      <feColorMatrix
-                        type="matrix"
-                        values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in2="BackgroundImageFix"
-                        result="effect1_dropShadow_198_107"
-                      />
-                      <feBlend
-                        mode="normal"
-                        in="SourceGraphic"
-                        in2="effect1_dropShadow_198_107"
-                        result="shape"
-                      />
-                    </filter>
-                  </defs>
-                </svg>
-              </div>
+                </g>
+                <path
+                  opacity="0.02"
+                  d="M399 9.49754C364.567 9.41864 127.073 7.0635 12.1291 6.93201C11.0026 27.6665 10.5 52.9564 10 84.8436C53.2415 84.8436 286.393 84.959 398 84.9261C398.5 62.4474 398.501 32.2522 399 9.49754Z"
+                  fill="#222222"
+                />
+                <defs>
+                  <filter
+                    id="filter0_d_198_107"
+                    x="3"
+                    y="6.93201"
+                    width="400"
+                    height="400"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dx="-1" dy="5" />
+                    <feGaussianBlur stdDeviation="2.5" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_198_107"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_198_107"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
             </div>
-          </Draggable>
-        ))}
+          </div>
+        </Draggable>
+      ))}
     </div>
   );
 };

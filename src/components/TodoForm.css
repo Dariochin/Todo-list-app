@@ -23,8 +23,8 @@ body {
 .btn__aggiungiNota {
   cursor: pointer;
   position: relative;
-  bottom: 30px;
-  right: 30px;
+  bottom: 50px;
+  right: 10px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -52,7 +52,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 3;
+  z-index: 4;
 }
 
 .showInput .overlay {
@@ -69,9 +69,9 @@ body {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  position: absolute;
+  position: sticky;
   transform: translate(-50%, -50%);
-  z-index: 100;
+  z-index: 10;
 }
 
 .input-section h3 {
@@ -176,5 +176,14 @@ body {
   position: absolute;
   left: -1px;
   bottom: -1px;
-  z-index: -100;
+  z-index: -1;
+}
+
+.delete-button {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.note:hover .delete-button {
+  opacity: 1;
 }
