@@ -245,6 +245,12 @@ const TodoForm = ({ notes, setNotes }) => {
                 />
               )}
             </div>
+            {/* return (
+    <div className="post-it">
+      <div className="post-it__top"></div>
+      <p>Scrivi qui il tuo messaggio</p>
+    </div>
+  ); */}
           </div>
         </Draggable>
       ))}
