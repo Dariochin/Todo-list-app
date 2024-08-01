@@ -134,7 +134,6 @@ const TodoForm = ({ notes, setNotes }) => {
                       borderRadius: "50%",
                       backgroundColor: selectedColor,
                       cursor: "pointer",
-                      border: "2px solid black",
                     }}
                   />
                   {showColorMenu && (
