@@ -7,9 +7,26 @@ const TodoForm = ({ notes, setNotes }) => {
   const [clickPosition, setClickPosition] = useState({ x: 0, y: 0 });
   const [newNote, setNewNote] = useState({ title: "", text: "" });
   const [remainingChars, setRemainingChars] = useState(120);
+
   const [editingNoteIndex, setEditingNoteIndex] = useState(null);
+  const [selectedColor, setSelectedColor] = useState("#FFF68B");
+  const [showColorMenu, setShowColorMenu] = useState(false);
+
   const dragStartTime = useRef(0);
   const dragThreshold = 100;
+
+  const colors = [
+    "#FFAFA3",
+    "#FFC470",
+    "#FBD767",
+    "#FFF68B",
+    "#CDFC93",
+    "#E6E6E6",
+    "#FFBDF2",
+    "#D9B8FF",
+    "#80CAFF",
+    "#71D7FF",
+  ];
 
   const handleButtonClick = () => {
     setClickPosition({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
@@ -75,6 +92,11 @@ const TodoForm = ({ notes, setNotes }) => {
     dragStartTime.current = Date.now();
   };
 
+  const handleColorSelection = (color) => {
+    setSelectedColor(color);
+    setShowColorMenu(false);
+  };
+
   return (
     <div className="App">
       <button className="btn__aggiungiNota" onClick={handleButtonClick}>
@@ -102,21 +124,42 @@ const TodoForm = ({ notes, setNotes }) => {
               <div className="tipologia">
                 <h3 style={{ fontSize: "12px" }}>Seleziona colore</h3>
                 <div
-                  style={{
-                    width: "25px",
-                    height: "25px",
-                    borderRadius: "50%",
-                    backgroundColor: "#ffff00",
-                    cursor: "pointer",
-                  }}
-                />
+                  className="color-selection"
+                  onClick={() => setShowColorMenu(!showColorMenu)}
+                >
+                  <div
+                    style={{
+                      width: 20,
+                      height: 20,
+                      borderRadius: "50%",
+                      backgroundColor: selectedColor,
+                      cursor: "pointer",
+                      border: "2px solid black",
+                    }}
+                  />
+                  {showColorMenu && (
+                    <div className="color-menu">
+                      {colors.map((color, index) => (
+                        <div
+                          key={index}
+                          style={{
+                            width: 20,
+                            height: 20,
+                            borderRadius: "50%",
+                            backgroundColor: color,
+                            cursor: "pointer",
+                            margin: "2px",
+                          }}
+                          onClick={() => handleColorSelection(color)}
+                        />
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
-              <hr
-                style={{
-                  borderColor: "black",
-                }}
-              />
+              <hr style={{ borderColor: "black" }} />
             </div>
+
             <div className="testo__titolo">
               <input
                 type="text"
@@ -183,6 +226,7 @@ const TodoForm = ({ notes, setNotes }) => {
             style={{
               top: note.y,
               left: note.x,
+              backgroundColor: note.color || "#FFF68B",
             }}
           >
             <span style={{ fontSize: "9px" }}>{note.title}</span>
@@ -197,56 +241,8 @@ const TodoForm = ({ notes, setNotes }) => {
                 viewBox="0 0 408 408"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-              >
-                <g filter="url(#filter0_d_198_107)">
-                  <path
-                    d="M399 9.40036C364.655 9.00542 126.769 7.59023 12.1196 6.93201C8.92468 31.0231 8.79156 276.97 9.12436 396.932C52.2553 396.932 285.681 396.603 397.003 396.438C395.805 359.709 397.835 123.109 399 9.40036Z"
-                    fill="#FFF68B"
-                  />
-                </g>
-                <path
-                  opacity="0.02"
-                  d="M399 9.49754C364.567 9.41864 127.073 7.0635 12.1291 6.93201C11.0026 27.6665 10.5 52.9564 10 84.8436C53.2415 84.8436 286.393 84.959 398 84.9261C398.5 62.4474 398.501 32.2522 399 9.49754Z"
-                  fill="#222222"
-                />
-                <defs>
-                  <filter
-                    id="filter0_d_198_107"
-                    x="3"
-                    y="6.93201"
-                    width="400"
-                    height="400"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                  >
-                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix
-                      in="SourceAlpha"
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      result="hardAlpha"
-                    />
-                    <feOffset dx="-1" dy="5" />
-                    <feGaussianBlur stdDeviation="2.5" />
-                    <feComposite in2="hardAlpha" operator="out" />
-                    <feColorMatrix
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.3 0"
-                    />
-                    <feBlend
-                      mode="normal"
-                      in2="BackgroundImageFix"
-                      result="effect1_dropShadow_198_107"
-                    />
-                    <feBlend
-                      mode="normal"
-                      in="SourceGraphic"
-                      in2="effect1_dropShadow_198_107"
-                      result="shape"
-                    />
-                  </filter>
-                </defs>
-              </svg>
+                dangerouslySetInnerHTML={{ __html: colors[note.color] || "" }}
+              />
             </div>
           </div>
         </Draggable>

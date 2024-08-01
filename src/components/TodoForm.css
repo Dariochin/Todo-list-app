@@ -25,13 +25,18 @@ body {
   position: relative;
   bottom: 50px;
   right: 10px;
-  width: 40px;
-  height: 40px;
+  min-height: 36px;
+  min-width: 0px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
   background-color: #ffe794;
+  border: #ebc190;
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
+    rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
   z-index: 4;
 }
 
@@ -65,7 +70,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: 17px;
-  background: #F6DFC4;
+  background: #f6dfc4;
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -115,6 +120,21 @@ body {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+
+.color-menu {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: repeat(5, 24px);
+  gap: 5px;
 }
 
 .container__conferma {
