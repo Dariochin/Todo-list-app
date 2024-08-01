@@ -234,14 +234,16 @@ const TodoForm = ({ notes, setNotes }) => {
               className="container-svg"
               onClick={() => handleEditNote(index)}
             >
-              <svg
-                width="408"
-                height="408"
-                viewBox="0 0 408 408"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                dangerouslySetInnerHTML={{ __html: colors[note.color] || "" }}
-              />
+              {colors[note.color] && (
+                <svg
+                  width="408"
+                  height="408"
+                  viewBox="0 0 408 408"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  dangerouslySetInnerHTML={{ __html: colors[note.color] }}
+                />
+              )}
             </div>
           </div>
         </Draggable>
