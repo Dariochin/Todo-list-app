@@ -81,12 +81,12 @@ const TodoForm = ({ notes, setNotes }) => {
     }
   };
 
-  const handleDeleteNote = (index, event) => {
+  /* const handleDeleteNote = (index, event) => {
     // Previene la propagazione dell'evento, evitando l'attivazione dell'editing
     event.stopPropagation();
     const updatedNotes = notes.filter((_, i) => i !== index);
     setNotes(updatedNotes);
-  };
+  }; */
 
   const handleDragStart = () => {
     dragStartTime.current = Date.now();
@@ -194,7 +194,7 @@ const TodoForm = ({ notes, setNotes }) => {
               <button className="btn__conferma" onClick={handleConfirm}>
                 {editingNoteIndex !== null ? "Modifica" : "Conferma"}
               </button>
-              <button
+              {/* <button
                 className="delete-button"
                 onClick={() => handleDeleteNote(editingNoteIndex)}
                 style={{
@@ -209,7 +209,7 @@ const TodoForm = ({ notes, setNotes }) => {
                 }}
               >
                 ×
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -225,32 +225,32 @@ const TodoForm = ({ notes, setNotes }) => {
             style={{
               top: note.y,
               left: note.x,
-              backgroundColor: note.color || "#FFF68B",
+              backgroundColor: selectedColor,
             }}
           >
+            <div
+              className="post-it__top"
+              style={{
+                backgroundColor: selectedColor,
+              }}
+            ></div>
             <span style={{ fontSize: "9px" }}>{note.title}</span>
             <span style={{ fontSize: "7px" }}>{note.text}</span>
             <div
               className="container-svg"
               onClick={() => handleEditNote(index)}
             >
-              {colors[note.color] && (
-                <svg
-                  width="408"
-                  height="408"
-                  viewBox="0 0 408 408"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  dangerouslySetInnerHTML={{ __html: colors[note.color] }}
+              {colors.map((color, colorIndex) => (
+                <div
+                  key={colorIndex}
+                  className={`color-picker ${
+                    color === selectedColor ? "active" : ""
+                  }`}
+                  style={{ backgroundColor: color }}
+                  onClick={() => handleColorSelection(color)}
                 />
-              )}
+              ))}
             </div>
-            {/* return (
-    <div className="post-it">
-      <div className="post-it__top"></div>
-      <p>Scrivi qui il tuo messaggio</p>
-    </div>
-  ); */}
           </div>
         </Draggable>
       ))}
