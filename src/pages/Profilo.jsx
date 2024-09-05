@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/* import React, { useState } from "react";
 
 const Profilo = () => {
   const [userData, setUserData] = useState({
@@ -10,7 +10,6 @@ const Profilo = () => {
   return (
     <div className="profilo-container">
       <h2>Profilo</h2>
-      {/* User information sections */}
       <div className="user-info">
         <label htmlFor="name">Nome:</label>
         <input
@@ -29,9 +28,8 @@ const Profilo = () => {
           onChange={handleUserDataChange}
         />
       </div>
-      {/* Add more user information fields as needed */}
     </div>
   );
 };
 
-export default Profilo;
+export default Profilo; */

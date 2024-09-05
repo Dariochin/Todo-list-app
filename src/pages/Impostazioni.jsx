@@ -1,17 +1,13 @@
-import React, { useState } from "react";
-// Import any necessary components or styles
+/* import React, { useState } from "react";
 
 const Impostazioni = () => {
   const [generalSettings, setGeneralSettings] = useState({
-    // Add your general settings here, e.g., theme, language
   });
 
   const [notificationSettings, setNotificationSettings] = useState({
-    // Add your notification settings here, e.g., email, sound
   });
 
   const handleGeneralSettingChange = (event) => {
-    // Update the generalSettings state based on the event
   };
 
   const handleNotificationSettingChange = (event) => {
@@ -21,7 +17,6 @@ const Impostazioni = () => {
   return (
     <div className="impostazioni-container">
       <h2>Impostazioni</h2>
-      {/* Settings sections */}
       <h3>Generali</h3>
       <div className="setting">
         <label htmlFor="theme">Tema:</label>
@@ -30,7 +25,6 @@ const Impostazioni = () => {
           <option value="dark">Scuro</option>
         </select>
       </div>
-      {/* Add more general settings as needed */}
 
       <h3>Notifiche</h3>
       <div className="setting">
@@ -42,9 +36,8 @@ const Impostazioni = () => {
           onChange={handleNotificationSettingChange}
         />
       </div>
-      {/* Add more notification settings as needed */}
     </div>
   );
 };
 
-export default Impostazioni;
+export default Impostazioni; */
