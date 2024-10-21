@@ -1,6 +1,6 @@
-/* import React, { useState } from "react";
+/* import React, { useState } from "react"; */
 
-const Impostazioni = () => {
+const Impostazioni = () => {/* 
   const [generalSettings, setGeneralSettings] = useState({
   });
 
@@ -12,10 +12,10 @@ const Impostazioni = () => {
 
   const handleNotificationSettingChange = (event) => {
     // Update the notificationSettings state based on the event
-  };
+  }; */
 
   return (
-    <div className="impostazioni-container">
+    <div className="impostazioni-container">{/* 
       <h2>Impostazioni</h2>
       <h3>Generali</h3>
       <div className="setting">
@@ -35,9 +35,9 @@ const Impostazioni = () => {
           checked={notificationSettings.emailNotifications}
           onChange={handleNotificationSettingChange}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default Impostazioni; */
+export default Impostazioni;

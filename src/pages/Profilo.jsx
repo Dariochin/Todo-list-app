@@ -1,14 +1,14 @@
-/* import React, { useState } from "react";
+/* import React, { useState } from "react"; */
 
 const Profilo = () => {
-  const [userData, setUserData] = useState({
+  /* const [userData, setUserData] = useState({
   });
 
   const handleUserDataChange = (event) => {
-  };
+  }; */
 
   return (
-    <div className="profilo-container">
+    <div className="profilo-container">{/* 
       <h2>Profilo</h2>
       <div className="user-info">
         <label htmlFor="name">Nome:</label>
@@ -27,9 +27,9 @@ const Profilo = () => {
           value={userData.email}
           onChange={handleUserDataChange}
         />
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default Profilo; */
+export default Profilo;
